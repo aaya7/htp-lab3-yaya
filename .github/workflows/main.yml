@@ -35,12 +35,11 @@ jobs:
         echo "My API key will '${{ secrets.APIKEY }}'."
         echo "My Persekitaran is '${{ vars.PERSEKITARAN }}'."
 
-        echo "My API key will '${{ env.APIKEY }}'."
+        echo "My API key will '${{ env.API_KEY }}'."
         echo "My Persekitaran is '${{ env.MYPERSEKITARAN }}'."
-
-        env:
-          API_KEY: ${{ secrets.APIKEY }}
-          MYPERSEKITARAN: ${{ vars.PERSEKITARAN }}
+       env:
+        API_KEY: ${{ secrets.APIKEY }}
+        MYPERSEKITARAN: ${{ vars.PERSEKITARAN }}
         
 
 
