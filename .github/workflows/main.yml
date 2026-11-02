@@ -21,7 +21,7 @@ jobs:
          # This swaps any line starting with '#' to '# My Checkout'
          sed -i 's/^#.*/# My Checkout - Approved/' README.md
        shell: bash
-       
+
      - name: Verify Modified README
        run: |
          echo "=== Checking current README contents ==="
@@ -32,6 +32,8 @@ jobs:
        run: |
         echo "Hello ${{github.actor}}"
         echo "Current branch is '${{ github.ref }}'."
+        echo "My API key will '${{ secrets.API_KEY }}'."
+        echo "My Persekitaran is '${{ vars.PERSEKITARAN }}'."
         
        shell: bash
      
